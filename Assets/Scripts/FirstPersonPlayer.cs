@@ -6,11 +6,14 @@ public class FirstPersonPlayer : MonoBehaviour
 {
 
     public float speed = 10;
-
+    public float jumpSpeed = 8;
+    public float gravity = 20f;
     public Camera playerCamera;
 
     public float lookSpeed = 2;
     public float lookXLimit = 45;
+
+    public float crouchDistance = 0.25f;
 
     CharacterController characterController;
 
@@ -28,7 +31,7 @@ public class FirstPersonPlayer : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         Vector3 forward = transform.TransformDirection(Vector3.forward);
         Vector3 right = transform.TransformDirection(Vector3.right);
@@ -39,7 +42,41 @@ public class FirstPersonPlayer : MonoBehaviour
 
         moveDirection = (forward * curSpeedx) + (right * curSpeedy);
 
-        characterController.Move(moveDirection * Time.deltaTime);
+        if (Input.GetButton("Jump") && characterController.isGrounded)
+        {
+            moveDirection.y = jumpSpeed;
+        }
+        else
+        {
+            moveDirection.y = movementDirectionY;
+        }
+
+        if(!characterController.isGrounded)
+        {
+            moveDirection.y -= gravity * Time.fixedDeltaTime;
+        }
+
+
+
+
+        characterController.Move(moveDirection * Time.fixedDeltaTime);
+
+
+    }
+
+    private void Update()
+    {
+
+
+        if (Input.GetButtonDown("Crouch"))
+        {
+            characterController.height = 1;
+        }
+        if (Input.GetButtonUp("Crouch"))
+        {
+            characterController.height = 1.5f;
+        }
+
 
         rotationX += -Input.GetAxis("Mouse Y") * lookSpeed;
         rotationX = Mathf.Clamp(rotationX, -lookXLimit, lookXLimit);
