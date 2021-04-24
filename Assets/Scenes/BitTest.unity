@@ -236,6 +236,7 @@ MonoBehaviour:
   LeverRoot: {fileID: 1735402291}
   Up: {fileID: 1640998517}
   Down: {fileID: 1668772329}
+  Noise: {fileID: 8300000, guid: 4a7685bcbe6117d4c9a7904ac25b0a48, type: 3}
 --- !u!1 &83783160
 GameObject:
   m_ObjectHideFlags: 0
@@ -547,6 +548,7 @@ MonoBehaviour:
   Open: 0
   Door: {fileID: 513443946}
   Collider: {fileID: 1380412465}
+  Noise: {fileID: 8300000, guid: edd61ea299fc53d4cbd122d255e478e7, type: 3}
 --- !u!65 &712150682
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6484,13 +6486,5 @@ PrefabInstance:
       propertyPath: UIImage
       value: 
       objectReference: {fileID: 1927870527}
-    - target: {fileID: 5624229726318175917, guid: de960f1ef417423468ebe1c6bfcfdbcb, type: 3}
-      propertyPath: ActiveCrosshair
-      value: 
-      objectReference: {fileID: 21300000, guid: 426244e505c5433468299ce84f807c8a, type: 3}
-    - target: {fileID: 5624229726318175917, guid: de960f1ef417423468ebe1c6bfcfdbcb, type: 3}
-      propertyPath: StandardCrosshair
-      value: 
-      objectReference: {fileID: 21300000, guid: 60a3436fb6682294cbce4ea75f3e928b, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: de960f1ef417423468ebe1c6bfcfdbcb, type: 3}

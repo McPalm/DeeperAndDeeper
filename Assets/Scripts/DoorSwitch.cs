@@ -7,6 +7,7 @@ public class DoorSwitch : MonoBehaviour, IInteractable
     public bool Open;
     public Animator Door;
     public Collider Collider;
+    public AudioClip Noise;
 
     public void Interact()
     {
@@ -15,6 +16,7 @@ public class DoorSwitch : MonoBehaviour, IInteractable
         Open = !Open;
         Door.SetBool("Open", Open);
         Collider.enabled = !Open;
+        AudioSource.PlayClipAtPoint(Noise, transform.position);
     }
 
     // Start is called before the first frame update

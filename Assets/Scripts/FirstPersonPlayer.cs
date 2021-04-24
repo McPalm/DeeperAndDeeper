@@ -25,8 +25,16 @@ public class FirstPersonPlayer : MonoBehaviour
 
     bool IsCrouching = false;
     // Start is called before the first frame update
+
+    float walkTime = 0f;
+    Vector3 CameraRoot;
+    public event System.Action OnJump;
+    public event System.Action OnStep;
+    public event System.Action OnLand;
+
     void Start()
     {
+        CameraRoot = playerCamera.transform.localPosition;
         characterController = GetComponent<CharacterController>();
 
         // Lock cursor
@@ -37,6 +45,10 @@ public class FirstPersonPlayer : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        if (Move == Vector2.zero)
+            walkTime = 0f;
+        else
+            walkTime += Crouch ? Time.fixedDeltaTime * .6f : Time.fixedDeltaTime;
         Vector3 forward = transform.TransformDirection(Vector3.forward);
         Vector3 right = transform.TransformDirection(Vector3.right);
 
@@ -52,6 +64,14 @@ public class FirstPersonPlayer : MonoBehaviour
         {
             moveDirection.y -= gravity * Time.fixedDeltaTime;
         }
+        else
+        {
+            if(moveDirection.y < -1f)
+            {
+                OnLand?.Invoke();
+                moveDirection.y = -0.1f;
+            }
+        }
 
         characterController.Move(moveDirection * Time.fixedDeltaTime);
 
@@ -65,12 +85,29 @@ public class FirstPersonPlayer : MonoBehaviour
     public void Jump()
     {
         if(characterController.isGrounded)
+        {
             moveDirection.y = jumpSpeed;
+            OnJump?.Invoke();
+        }
 
     }
 
+    bool down = false;
     private void Update()
     {
+        float osett = Mathf.Sin(walkTime * 15f);
+        playerCamera.transform.localPosition = CameraRoot + Vector3.up * osett * Mathf.Clamp(walkTime, 0f, .2f) * .35f;
+        if (osett > .5f)
+        {
+            if(down == false)
+            {
+                down = true;
+                if (characterController.isGrounded)
+                    OnStep?.Invoke();
+            }
+        }
+        else
+            down = false;
     }
 
     public void Look(Vector2 change)

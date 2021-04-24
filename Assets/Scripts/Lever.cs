@@ -13,6 +13,8 @@ public class Lever : MonoBehaviour, IInteractable
     public GameObject Up;
     public GameObject Down;
 
+    public AudioClip Noise;
+
     void Start()
     {
         d = startUp ? "up" : "down";
@@ -54,6 +56,7 @@ public class Lever : MonoBehaviour, IInteractable
         StopAllCoroutines();
         d = d == "up" ? "down" : "up";
         SetDirection(d);
+        AudioSource.PlayClipAtPoint(Noise, transform.position);
     }
 
     void Set(GameObject o, bool on)

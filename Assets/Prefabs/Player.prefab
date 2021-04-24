@@ -152,7 +152,7 @@ Camera:
     height: 1
   near clip plane: 0.04
   far clip plane: 1000
-  field of view: 80
+  field of view: 70
   orthographic: 0
   orthographic size: 5
   m_Depth: 0
@@ -225,6 +225,7 @@ GameObject:
   - component: {fileID: 8127125212181895090}
   - component: {fileID: 1181426678585775645}
   - component: {fileID: 5624229726318175917}
+  - component: {fileID: 5972735971170373098}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -273,7 +274,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4da4b06f1d44f444a8cafab897fe3c22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  runspeed: 7
+  runspeed: 5
   crouchSpeed: 2.5
   jumpSpeed: 8
   gravity: 20
@@ -355,6 +356,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Camera: {fileID: 329111965405634388}
   maxDistance: 2
-  StandardCrosshair: {fileID: 0}
-  ActiveCrosshair: {fileID: 0}
+  StandardCrosshair: {fileID: 21300000, guid: 60a3436fb6682294cbce4ea75f3e928b, type: 3}
+  ActiveCrosshair: {fileID: 21300000, guid: 426244e505c5433468299ce84f807c8a, type: 3}
   UIImage: {fileID: 0}
+--- !u!114 &5972735971170373098
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 329111966231261441}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65f903799a7543a46952140a84c61f5e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  step: {fileID: 8300000, guid: 3426ea9fc48da9149bb9ca27a97e3cc1, type: 3}
+  waterStep: {fileID: 8300000, guid: 4a7685bcbe6117d4c9a7904ac25b0a48, type: 3}
+  jump: {fileID: 8300000, guid: 5717b0c82b41634429e06e8116eacd68, type: 3}
