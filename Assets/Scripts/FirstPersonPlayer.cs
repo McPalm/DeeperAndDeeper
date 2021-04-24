@@ -40,7 +40,7 @@ public class FirstPersonPlayer : MonoBehaviour
         Vector3 forward = transform.TransformDirection(Vector3.forward);
         Vector3 right = transform.TransformDirection(Vector3.right);
 
-        var speed = characterController.height < 1f ? crouchSpeed : runspeed;
+        var speed = IsCrouching ? crouchSpeed : runspeed;
         float curSpeedx = speed * Move.y;
         float curSpeedy = speed * Move.x;
         float movementDirectionY = moveDirection.y;
@@ -54,6 +54,12 @@ public class FirstPersonPlayer : MonoBehaviour
         }
 
         characterController.Move(moveDirection * Time.fixedDeltaTime);
+
+        if(Crouch != IsCrouching)
+        {
+            IsCrouching = Crouch;
+            characterController.height = Crouch ? .95f : 1.7f;
+        }
     }
 
     public void Jump()
@@ -67,18 +73,6 @@ public class FirstPersonPlayer : MonoBehaviour
 
     private void Update()
     {
-        if(Crouch != IsCrouching)
-        {
-            IsCrouching = Crouch;
-            characterController.height = Crouch ? .95f : 1.6f;
-        }
-
-        /*
-        rotationX += -Input.GetAxis("Mouse Y") * lookSpeed;
-        rotationX = Mathf.Clamp(rotationX, -lookXLimit, lookXLimit);
-        playerCamera.transform.localRotation = Quaternion.Euler(rotationX, 0, 0);
-        transform.rotation *= Quaternion.Euler(0, Input.GetAxis("Mouse X") * lookSpeed, 0);
-        */
     }
 
     public void Look(Vector2 change)

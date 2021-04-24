@@ -35,6 +35,9 @@ public class InputInit : MonoBehaviour
                         action.performed += Look;
                         action.canceled += Look;
                         break;
+                    case "Use":
+                        action.started += (a) => GetComponent<InteractController>().Interact();
+                        break;
 
                 }
             }
