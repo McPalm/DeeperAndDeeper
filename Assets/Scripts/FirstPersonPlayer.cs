@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class FirstPersonPlayer : MonoBehaviour
 {
-
-    public float speed = 10;
+    public float runspeed = 10;
+    public float crouchSpeed = 5f;
     public float jumpSpeed = 8;
     public float gravity = 20f;
     public Camera playerCamera;
@@ -20,6 +20,10 @@ public class FirstPersonPlayer : MonoBehaviour
     Vector3 moveDirection = Vector3.zero;
     float rotationX = 0;
 
+    public Vector2 Move { get; set; }
+    public bool Crouch { get; set; }
+
+    bool IsCrouching = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -36,51 +40,46 @@ public class FirstPersonPlayer : MonoBehaviour
         Vector3 forward = transform.TransformDirection(Vector3.forward);
         Vector3 right = transform.TransformDirection(Vector3.right);
 
-        float curSpeedx = speed * Input.GetAxis("Vertical");
-        float curSpeedy = speed * Input.GetAxis("Horizontal");
+        var speed = IsCrouching ? crouchSpeed : runspeed;
+        float curSpeedx = speed * Move.y;
+        float curSpeedy = speed * Move.x;
         float movementDirectionY = moveDirection.y;
 
         moveDirection = (forward * curSpeedx) + (right * curSpeedy);
-
-        if (Input.GetButton("Jump") && characterController.isGrounded)
-        {
-            moveDirection.y = jumpSpeed;
-        }
-        else
-        {
-            moveDirection.y = movementDirectionY;
-        }
+        moveDirection.y = movementDirectionY;
 
         if(!characterController.isGrounded)
         {
             moveDirection.y -= gravity * Time.fixedDeltaTime;
         }
 
-
-
-
         characterController.Move(moveDirection * Time.fixedDeltaTime);
 
+        if(Crouch != IsCrouching)
+        {
+            IsCrouching = Crouch;
+            characterController.height = Crouch ? .95f : 1.7f;
+        }
+    }
+
+    public void Jump()
+    {
+        Debug.Log("Jump");
+        Debug.Log(characterController.isGrounded);
+        if(characterController.isGrounded)
+            moveDirection.y = jumpSpeed;
 
     }
 
     private void Update()
     {
+    }
 
-
-        if (Input.GetButtonDown("Crouch"))
-        {
-            characterController.height = 1;
-        }
-        if (Input.GetButtonUp("Crouch"))
-        {
-            characterController.height = 1.5f;
-        }
-
-
-        rotationX += -Input.GetAxis("Mouse Y") * lookSpeed;
+    public void Look(Vector2 change)
+    {
+        rotationX += -change.y * lookSpeed;
         rotationX = Mathf.Clamp(rotationX, -lookXLimit, lookXLimit);
         playerCamera.transform.localRotation = Quaternion.Euler(rotationX, 0, 0);
-        transform.rotation *= Quaternion.Euler(0, Input.GetAxis("Mouse X") * lookSpeed, 0);
+        transform.rotation *= Quaternion.Euler(0, change.x * lookSpeed, 0);
     }
 }
