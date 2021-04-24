@@ -64,8 +64,6 @@ public class FirstPersonPlayer : MonoBehaviour
 
     public void Jump()
     {
-        Debug.Log("Jump");
-        Debug.Log(characterController.isGrounded);
         if(characterController.isGrounded)
             moveDirection.y = jumpSpeed;
 

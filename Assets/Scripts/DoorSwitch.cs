@@ -10,6 +10,8 @@ public class DoorSwitch : MonoBehaviour, IInteractable
 
     public void Interact()
     {
+        if (!enabled)
+            return;
         Open = !Open;
         Door.SetBool("Open", Open);
         Collider.enabled = !Open;
