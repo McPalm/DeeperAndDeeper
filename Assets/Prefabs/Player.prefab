@@ -277,7 +277,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   runspeed: 5
   crouchSpeed: 2.5
-  jumpSpeed: 8
+  jumpSpeed: 6.5
   gravity: 20
   playerCamera: {fileID: 329111965405634388}
   lookSpeed: 0.16
