@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1551346675}
   - component: {fileID: 1551346676}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Directional Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -105,7 +105,7 @@ GameObject:
   - component: {fileID: 329111965405634388}
   - component: {fileID: 329111965405634391}
   - component: {fileID: 329111965405634390}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Camera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -226,7 +226,8 @@ GameObject:
   - component: {fileID: 1181426678585775645}
   - component: {fileID: 5624229726318175917}
   - component: {fileID: 5972735971170373098}
-  m_Layer: 0
+  - component: {fileID: 4670985941621777729}
+  m_Layer: 6
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -374,3 +375,22 @@ MonoBehaviour:
   step: {fileID: 8300000, guid: 3426ea9fc48da9149bb9ca27a97e3cc1, type: 3}
   waterStep: {fileID: 8300000, guid: 4a7685bcbe6117d4c9a7904ac25b0a48, type: 3}
   jump: {fileID: 8300000, guid: 5717b0c82b41634429e06e8116eacd68, type: 3}
+--- !u!114 &4670985941621777729
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 329111966231261441}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f201c8adb23e8ff43b7db25954a7b3b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  head: {fileID: 329111965405634393}
+  waterMask:
+    serializedVersion: 2
+    m_Bits: 16
+  groundMask:
+    serializedVersion: 2
+    m_Bits: 1

@@ -48,7 +48,7 @@ public class FirstPersonPlayer : MonoBehaviour
         if (Move == Vector2.zero)
             walkTime = 0f;
         else
-            walkTime += Crouch ? Time.fixedDeltaTime * .6f : Time.fixedDeltaTime;
+            walkTime += Crouch ? Time.fixedDeltaTime * crouchSpeed : Time.fixedDeltaTime * runspeed;
         Vector3 forward = transform.TransformDirection(Vector3.forward);
         Vector3 right = transform.TransformDirection(Vector3.right);
 
@@ -95,7 +95,7 @@ public class FirstPersonPlayer : MonoBehaviour
     bool down = false;
     private void Update()
     {
-        float osett = Mathf.Sin(walkTime * 15f);
+        float osett = Mathf.Sin(walkTime * 3f);
         playerCamera.transform.localPosition = CameraRoot + Vector3.up * osett * Mathf.Clamp(walkTime, 0f, .2f) * .35f;
         if (osett > .5f)
         {
