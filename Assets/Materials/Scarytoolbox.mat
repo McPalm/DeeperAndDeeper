@@ -21,7 +21,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Scarytoolbox
-  m_Shader: {fileID: -6465566751694194690, guid: de0c811a856dc4d48af6a34fb3d92cb5, type: 3}
+  m_Shader: {fileID: -6465566751694194690, guid: e7b619b9304bfe34ea28fc0d882df7c4, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -126,7 +126,7 @@ Material:
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
-    - Color_2456c55b784940c6a700845af3cf3edc: {r: 1, g: 0.7932727, b: 0.5424528, a: 0}
+    - Color_2456c55b784940c6a700845af3cf3edc: {r: 0.9292453, g: 0.9696306, b: 1, a: 0}
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
