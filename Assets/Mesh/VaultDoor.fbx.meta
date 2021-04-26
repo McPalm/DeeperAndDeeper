@@ -1,8 +1,17 @@
 fileFormatVersion: 2
-guid: 51034303bfbe4004f9c7784a5927b895
+guid: c8ebde5fbc948804ebf6dc5079118a6a
 ModelImporter:
   serializedVersion: 20200
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      74: 1029783671878652355
+    second: VaultDoorArma|VaultDoorOpen
+  - first:
+      74: -903005173173304543
+    second: VaultDoorArma|VaultClosed
+  - first:
+      74: -2649661746566177885
+    second: VaultDoorArma|VaultDoorArmaAction
   externalObjects: {}
   materials:
     materialImportMode: 2
@@ -86,7 +95,7 @@ ModelImporter:
     legStretch: 0.05
     feetSpacing: 0
     globalScale: 1
-    rootMotionBoneName: 
+    rootMotionBoneName: VaultDoor
     hasTranslationDoF: 0
     hasExtraRoot: 0
     skeletonHasParents: 1
@@ -94,7 +103,7 @@ ModelImporter:
   autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 2
   humanoidOversampling: 1
-  avatarSetup: 0
+  avatarSetup: 1
   addHumanoidExtraRootOnlyWhenUsingAvatar: 1
   additionalBone: 0
   userData: 
