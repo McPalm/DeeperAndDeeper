@@ -1,10 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 public class NumpadManager : MonoBehaviour
 {
-    public TextMesh DisplayText;
+    public Text DisplayText;
 
     public DoorSwitch doorSwitch;
 
@@ -20,10 +20,13 @@ public class NumpadManager : MonoBehaviour
     int Entries = 0;
     int LookingEntries = 4;
 
+    bool Complete = false;
 
 
     public void InputGiven(string input)
     {
+        if (Complete) return;
+
         Entries++;
         current = current + input;
         if (Entries >= LookingEntries)
@@ -33,7 +36,7 @@ public class NumpadManager : MonoBehaviour
                 DisplayText.text = Correct;
 
                 doorSwitch.Interact();
-                DisplayText.gameObject.SetActive(false);
+                Complete = true;
                 return;
             }
 
