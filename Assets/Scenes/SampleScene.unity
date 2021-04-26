@@ -681,11 +681,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b3b4c41ea512ee2448ef7e1f59dde6b5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.13849999
+      value: 0.1385
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b3b4c41ea512ee2448ef7e1f59dde6b5, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 0.001
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b3b4c41ea512ee2448ef7e1f59dde6b5, type: 3}
       propertyPath: m_LocalRotation.w
@@ -715,6 +715,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -4883062187650683576, guid: b3b4c41ea512ee2448ef7e1f59dde6b5, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 732725d1d0461044dad53eddb1b417e6, type: 2}
     - target: {fileID: 919132149155446097, guid: b3b4c41ea512ee2448ef7e1f59dde6b5, type: 3}
       propertyPath: m_Name
       value: AirlockDoorLarge
@@ -2326,6 +2330,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 77e96350bf1776349aa7fa144a5e5641, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b1cdb9b2d5818064f9fcbf7d46eb9066, type: 2}
+    - target: {fileID: -7511558181221131132, guid: 77e96350bf1776349aa7fa144a5e5641, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: d657208299439254aace2ed163da3de2, type: 2}
     - target: {fileID: 919132149155446097, guid: 77e96350bf1776349aa7fa144a5e5641, type: 3}
       propertyPath: m_Name
       value: Submarine
@@ -2907,15 +2919,19 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: b4a6bb6fdafbfca49b3d09aeb4adb767, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 946deb353a72f404c94e59e85114b4e0, type: 2}
+      objectReference: {fileID: 2100000, guid: be1b021e514cbbf408f48fce92020d6d, type: 2}
     - target: {fileID: -7511558181221131132, guid: b4a6bb6fdafbfca49b3d09aeb4adb767, type: 3}
       propertyPath: m_Materials.Array.data[1]
       value: 
-      objectReference: {fileID: 2100000, guid: d1e9ca81fa7cd9542906bac24cdc8d4a, type: 2}
+      objectReference: {fileID: 2100000, guid: f86a7b6d68b3ade4aacafb54846f3ae7, type: 2}
     - target: {fileID: -7511558181221131132, guid: b4a6bb6fdafbfca49b3d09aeb4adb767, type: 3}
       propertyPath: m_Materials.Array.data[2]
       value: 
-      objectReference: {fileID: 2100000, guid: 4330e8366aa05414cb31a4df55851dbb, type: 2}
+      objectReference: {fileID: 2100000, guid: c444044b5973385489581182cc00539c, type: 2}
+    - target: {fileID: -7511558181221131132, guid: b4a6bb6fdafbfca49b3d09aeb4adb767, type: 3}
+      propertyPath: m_Materials.Array.data[3]
+      value: 
+      objectReference: {fileID: 2100000, guid: 284144b29cd0fd3419832e75d2f093ca, type: 2}
     - target: {fileID: 919132149155446097, guid: b4a6bb6fdafbfca49b3d09aeb4adb767, type: 3}
       propertyPath: m_Name
       value: Level03
