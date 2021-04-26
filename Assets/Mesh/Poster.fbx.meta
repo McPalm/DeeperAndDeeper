@@ -1,29 +1,8 @@
 fileFormatVersion: 2
-guid: b3b4c41ea512ee2448ef7e1f59dde6b5
+guid: baf09c8ad73fe5140985a1dedc33f673
 ModelImporter:
   serializedVersion: 20200
-  internalIDToNameTable:
-  - first:
-      74: 4385343803845142664
-    second: Armature|DoorOpen
-  - first:
-      74: -1032617059227010853
-    second: Armature|DoorOpen.001
-  - first:
-      74: 2156419310152709239
-    second: AirlockDoor|DoorOpen
-  - first:
-      74: -1875832958016442734
-    second: Armature|DoorOpen.002
-  - first:
-      74: -3396790976223027118
-    second: Armature|DoorOpen.003
-  - first:
-      74: 3187778894101027155
-    second: Armature|DoorOpen.004
-  - first:
-      74: 9076537886686267156
-    second: Armature|DoorOpen.005
+  internalIDToNameTable: []
   externalObjects: {}
   materials:
     materialImportMode: 2
@@ -44,7 +23,7 @@ ModelImporter:
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
     importConstraints: 0
-    animationCompression: 3
+    animationCompression: 1
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5
@@ -66,7 +45,7 @@ ModelImporter:
     importLights: 1
     fileIdsGeneration: 2
     swapUVChannels: 0
-    generateSecondaryUV: 1
+    generateSecondaryUV: 0
     useFileUnits: 1
     keepQuads: 0
     weldVertices: 1
@@ -107,15 +86,15 @@ ModelImporter:
     legStretch: 0.05
     feetSpacing: 0
     globalScale: 1
-    rootMotionBoneName: AirlockDoor
+    rootMotionBoneName: 
     hasTranslationDoF: 0
-    hasExtraRoot: 1
+    hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 2
   humanoidOversampling: 1
-  avatarSetup: 1
+  avatarSetup: 0
   addHumanoidExtraRootOnlyWhenUsingAvatar: 1
   additionalBone: 0
   userData: 
