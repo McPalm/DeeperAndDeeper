@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Officetable
+  m_Name: Office_dark
   m_Shader: {fileID: -6465566751694194690, guid: de0c811a856dc4d48af6a34fb3d92cb5, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
@@ -24,7 +24,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - Texture2D_b6df72b4a1dd4a7fb83681a04cdce3c8:
-        m_Texture: {fileID: 2800000, guid: 8d6d5254592f26b41801275e700e2fd9, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BaseMap:
@@ -88,9 +88,9 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - Vector1_34c39eadbdeb4b2789357a312ffd1ecc: 0.204
-    - Vector1_355c28ac0b634afab3a812a1e7ba7eca: 0
-    - Vector1_e30b6d4d12ba49dd9014e3adca07d5d5: 0.65
+    - Vector1_34c39eadbdeb4b2789357a312ffd1ecc: 0.189
+    - Vector1_355c28ac0b634afab3a812a1e7ba7eca: 0.613
+    - Vector1_e30b6d4d12ba49dd9014e3adca07d5d5: 0.676
     - _AlphaClip: 0
     - _Blend: 0
     - _BumpScale: 1
@@ -118,7 +118,7 @@ Material:
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
-    - Color_2456c55b784940c6a700845af3cf3edc: {r: 1, g: 1, b: 1, a: 0}
+    - Color_2456c55b784940c6a700845af3cf3edc: {r: 0.8679245, g: 0.8679245, b: 0.8679245, a: 0}
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
