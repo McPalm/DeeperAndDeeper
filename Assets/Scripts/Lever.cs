@@ -75,5 +75,8 @@ public class Lever : MonoBehaviour, IInteractable
         var end = o.GetComponent<PuzzleEnd>();
         if(end)
             end.SetActive(on);
+        var audio = o.GetComponent<AudioSource>();
+        if (audio)
+            audio.enabled = on;
     }
 }
