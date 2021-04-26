@@ -3,7 +3,17 @@ guid: 49d6532fc79dc004db85f4cc9405e189
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Keyreader
+    second: {fileID: 2100000, guid: 6a491a6c46f688c4fbc98d994642aed1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Keyreaderglow
+    second: {fileID: 2100000, guid: ec739259ec61f5d4ba3ed6d34fd802a6, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
