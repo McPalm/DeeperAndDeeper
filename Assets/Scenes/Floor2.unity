@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 2138677392}
-  m_IndirectSpecularColor: {r: 0.28502667, g: 0.37139323, b: 0.49600998, a: 1}
+  m_IndirectSpecularColor: {r: 0.2850269, g: 0.3713935, b: 0.49601045, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -186,6 +186,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -90
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: bcd28681940425a4593dec04b0098387, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 049801ea13509454c8a880a7c08b6e45, type: 2}
     - target: {fileID: 919132149155446097, guid: bcd28681940425a4593dec04b0098387, type: 3}
       propertyPath: m_Name
       value: Elevator (1)
@@ -294,11 +298,31 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 6e6a433ebdd00b64dbd9496f1fe25985, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 946deb353a72f404c94e59e85114b4e0, type: 2}
+      objectReference: {fileID: 2100000, guid: 1f3e47679425ff44ba2962159010907d, type: 2}
     - target: {fileID: -7511558181221131132, guid: 6e6a433ebdd00b64dbd9496f1fe25985, type: 3}
       propertyPath: m_Materials.Array.data[1]
       value: 
-      objectReference: {fileID: 2100000, guid: d1e9ca81fa7cd9542906bac24cdc8d4a, type: 2}
+      objectReference: {fileID: 2100000, guid: 24563b238f11f6847b17940aa1f9b178, type: 2}
+    - target: {fileID: -7511558181221131132, guid: 6e6a433ebdd00b64dbd9496f1fe25985, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: b03ff00109bad2c4b9413f207a38ea3f, type: 2}
+    - target: {fileID: -7511558181221131132, guid: 6e6a433ebdd00b64dbd9496f1fe25985, type: 3}
+      propertyPath: m_Materials.Array.data[3]
+      value: 
+      objectReference: {fileID: 2100000, guid: b239d801bfaad93438ddfa0726253026, type: 2}
+    - target: {fileID: -7511558181221131132, guid: 6e6a433ebdd00b64dbd9496f1fe25985, type: 3}
+      propertyPath: m_Materials.Array.data[4]
+      value: 
+      objectReference: {fileID: 2100000, guid: 75f26aaada4b0f041874a17d73ba8b96, type: 2}
+    - target: {fileID: -7511558181221131132, guid: 6e6a433ebdd00b64dbd9496f1fe25985, type: 3}
+      propertyPath: m_Materials.Array.data[5]
+      value: 
+      objectReference: {fileID: 2100000, guid: 559c42a10ad7f514594f7055da973af8, type: 2}
+    - target: {fileID: -7511558181221131132, guid: 6e6a433ebdd00b64dbd9496f1fe25985, type: 3}
+      propertyPath: m_Materials.Array.data[6]
+      value: 
+      objectReference: {fileID: 2100000, guid: ee867d3d3b0256a4883d7d60aaabdca7, type: 2}
     - target: {fileID: 919132149155446097, guid: 6e6a433ebdd00b64dbd9496f1fe25985, type: 3}
       propertyPath: m_Name
       value: Level02
@@ -537,6 +561,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: bcd28681940425a4593dec04b0098387, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 049801ea13509454c8a880a7c08b6e45, type: 2}
     - target: {fileID: 919132149155446097, guid: bcd28681940425a4593dec04b0098387, type: 3}
       propertyPath: m_Name
       value: Elevator
