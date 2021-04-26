@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Wood
+  m_Name: Scarytoolbox
   m_Shader: {fileID: -6465566751694194690, guid: de0c811a856dc4d48af6a34fb3d92cb5, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
@@ -33,7 +33,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - Texture2D_90e1691b822547a7b30df15e6ec0498c:
-        m_Texture: {fileID: 2800000, guid: 8da700e0f5d42084185b2028518ded84, type: 3}
+        m_Texture: {fileID: 2800000, guid: ce1d1330542d8d341a5c32a34caf100d, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BaseMap:
